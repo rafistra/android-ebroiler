@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.Profile"
+    android:background="@color/brown">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginVertical="12dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Profil"
+        android:textColor="@color/white"
+        android:textSize="24dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/shape_body1">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_baseline_account_circle_24"
+            app:tint="@color/white"
+            android:layout_marginTop="64dp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/name_profil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user"
+            android:textSize="24sp"
+            android:fontFamily="@font/roboto_black"
+            android:layout_below="@+id/imageView2"
+            android:layout_centerHorizontal="true"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="64dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/shape_button"
+            android:text="@string/logout"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,985 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.SubFragmentControl.ControlLantai1">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/shape_body1">
+
+        <TextView
+            android:id="@+id/coba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="coba"
+            android:textSize="30dp"
+            android:visibility="gone" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="8dp"
+            android:backgroundTint="#f3d6c1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Mode"
+                    android:textColor="@color/dark_green"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@color/brown" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_mode_auto" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Mode Otomatis"
+                        android:textSize="12dp" />
+
+                    <Switch
+                        android:id="@+id/switch_modekontrol"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:gravity="center" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_intermiten_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginTop="12dp"
+                    android:visibility="visible"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Status Intermiten"
+                            android:textColor="@color/dark_green"
+                            android:textSize="16dp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginHorizontal="24dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/shape_rectangle" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="6dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/shape_rectangle3">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="ON Interval: "
+                                        android:fontFamily="@font/roboto_regular"
+                                        android:textSize="12sp"/>
+                                    <TextView
+                                        android:id="@+id/imtn_on"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0 menit"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:textSize="14sp"/>
+                                </LinearLayout>
+                                <ImageView
+                                    android:layout_width="10dp"
+                                    android:layout_height="0dp"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="6dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/shape_rectangle3">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="OFF Interval: "
+                                        android:fontFamily="@font/roboto_regular"
+                                        android:textSize="12sp"/>
+                                    <TextView
+                                        android:id="@+id/imtn_off"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0 menit"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:textSize="14sp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="8dp">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="6dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/shape_rectangle3">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Jam Pagi: "
+                                        android:fontFamily="@font/roboto_regular"
+                                        android:textSize="12sp"/>
+                                    <TextView
+                                        android:id="@+id/imtn_pagi"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="00:00"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:textSize="14sp"/>
+                                </LinearLayout>
+                                <ImageView
+                                    android:layout_width="10dp"
+                                    android:layout_height="0dp"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="6dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/shape_rectangle3">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Jam Malam: "
+                                        android:fontFamily="@font/roboto_regular"
+                                        android:textSize="12sp"/>
+                                    <TextView
+                                        android:id="@+id/imtn_malam"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="16:00"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:textSize="14sp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_atursetpoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:visibility="visible"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Atur Kontrol Kipas Intermiten"
+                            android:textColor="@color/dark_green"
+                            android:textSize="16dp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginHorizontal="24dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/shape_rectangle" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <EditText
+                                        android:id="@+id/inp_imtn_on"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/shape_outline_textinput2"
+                                        android:hint="Interval Hidup"
+                                        android:inputType="number"
+                                        android:padding="4dp"
+                                        android:paddingStart="8dp"
+                                        android:textSize="16sp"
+                                        android:imeOptions="actionDone"/>
+
+                                    <androidx.appcompat.widget.AppCompatButton
+                                        android:id="@+id/btn_update_imtn_on"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="right"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/shape_button"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:text="UBAH"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp">
+
+                                    <EditText
+                                        android:id="@+id/inp_imtn_off"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/shape_outline_textinput2"
+                                        android:hint="Interval Mati"
+                                        android:inputType="number"
+                                        android:padding="4dp"
+                                        android:paddingStart="8dp"
+                                        android:textSize="16sp" />
+
+                                    <androidx.appcompat.widget.AppCompatButton
+                                        android:id="@+id/btn_update_imtn_off"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="right"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/shape_button"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:text="UBAH"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp">
+
+                                    <EditText
+                                        android:id="@+id/inp_imtn_pagi"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/shape_outline_textinput2"
+                                        android:hint="Tentukan Waktu Pagi"
+                                        android:inputType="time"
+                                        android:focusable="false"
+                                        android:padding="4dp"
+                                        android:paddingStart="8dp"
+                                        android:textSize="16sp" />
+
+                                    <androidx.appcompat.widget.AppCompatButton
+                                        android:id="@+id/btn_update_imtn_pagi"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="right"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/shape_button"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:text="UBAH"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="12dp">
+
+                                    <EditText
+                                        android:id="@+id/inp_imtn_malam"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/shape_outline_textinput2"
+                                        android:hint="Tentukan Waktu Malam"
+                                        android:inputType="time"
+                                        android:focusable="false"
+                                        android:padding="4dp"
+                                        android:paddingStart="8dp"
+                                        android:textSize="16sp" />
+
+                                    <androidx.appcompat.widget.AppCompatButton
+                                        android:id="@+id/btn_update_imtn_malam"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="right"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/shape_button"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:text="UBAH"
+                                        android:textColor="@color/white" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_aturkontrol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="12dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Kontrol Manual"
+                            android:textColor="@color/dark_green"
+                            android:textSize="16dp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginHorizontal="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="12dp"
+                            android:src="@drawable/shape_rectangle" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="8dp"
+                                android:paddingVertical="8dp"
+                                android:paddingEnd="3dp"
+                                android:paddingStart="6dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:background="@drawable/shape_body2">
+                                <pl.droidsonroids.gif.GifImageView
+                                    android:id="@+id/ic_on_kipas1"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_actuator_fan"
+                                    android:visibility="gone" />
+                                <ImageView
+                                    android:id="@+id/ic_off_kipas1"
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:src="@drawable/ic_actuator_off_fan" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="6dp"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="@string/kipas1"
+                                    android:textSize="12dp" />
+                                <Switch
+                                    android:id="@+id/switch_kipas1"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="12dp"
+                                android:paddingVertical="8dp"
+                                android:paddingEnd="3dp"
+                                android:paddingStart="6dp"
+                                android:background="@drawable/shape_body2"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <pl.droidsonroids.gif.GifImageView
+                                    android:id="@+id/ic_on_kipas2"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/ic_actuator_fan"
+                                    android:visibility="gone" />
+
+                                <ImageView
+                                    android:id="@+id/ic_off_kipas2"
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:src="@drawable/ic_actuator_off_fan" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="6dp"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="Kipas 2"
+                                    android:textSize="12dp" />
+
+                                <Switch
+                                    android:id="@+id/switch_kipas2"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="8dp"
+                                android:paddingVertical="8dp"
+                                android:paddingEnd="3dp"
+                                android:paddingStart="6dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:background="@drawable/shape_body2">
+                                <pl.droidsonroids.gif.GifImageView
+                                    android:id="@+id/ic_on_kipas3"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_actuator_fan"
+                                    android:visibility="gone" />
+                                <ImageView
+                                    android:id="@+id/ic_off_kipas3"
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:src="@drawable/ic_actuator_off_fan" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="6dp"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="Kipas 3"
+                                    android:textSize="12dp" />
+                                <Switch
+                                    android:id="@+id/switch_kipas3"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="12dp"
+                                android:paddingVertical="8dp"
+                                android:paddingEnd="3dp"
+                                android:paddingStart="6dp"
+                                android:background="@drawable/shape_body2"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <pl.droidsonroids.gif.GifImageView
+                                    android:id="@+id/ic_on_kipas4"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/ic_actuator_fan"
+                                    android:visibility="gone" />
+
+                                <ImageView
+                                    android:id="@+id/ic_off_kipas4"
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:src="@drawable/ic_actuator_off_fan" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="6dp"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="@string/kipas4"
+                                    android:textSize="12dp" />
+
+                                <Switch
+                                    android:id="@+id/switch_kipas4"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="8dp"
+                                android:paddingVertical="8dp"
+                                android:paddingEnd="3dp"
+                                android:paddingStart="6dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:background="@drawable/shape_body2">
+                                <pl.droidsonroids.gif.GifImageView
+                                    android:id="@+id/ic_on_kipas5"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_actuator_fan"
+                                    android:visibility="gone" />
+                                <ImageView
+                                    android:id="@+id/ic_off_kipas5"
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:src="@drawable/ic_actuator_off_fan" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="6dp"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="@string/kipas5"
+                                    android:textSize="12dp" />
+                                <Switch
+                                    android:id="@+id/switch_kipas5"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="12dp"
+                                android:paddingVertical="8dp"
+                                android:paddingEnd="3dp"
+                                android:paddingStart="6dp"
+                                android:background="@drawable/shape_body2"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+                                <pl.droidsonroids.gif.GifImageView
+                                    android:id="@+id/ic_on_kipas6"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/ic_actuator_fan"
+                                    android:visibility="gone" />
+                                <ImageView
+                                    android:id="@+id/ic_off_kipas6"
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:src="@drawable/ic_actuator_off_fan" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="6dp"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="@string/kipas6"
+                                    android:textSize="12dp" />
+                                <Switch
+                                    android:id="@+id/switch_kipas6"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="8dp"
+                                android:paddingVertical="8dp"
+                                android:paddingEnd="3dp"
+                                android:paddingStart="6dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:background="@drawable/shape_body2">
+                                <pl.droidsonroids.gif.GifImageView
+                                    android:id="@+id/ic_on_kipas7"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_actuator_fan"
+                                    android:visibility="gone" />
+                                <ImageView
+                                    android:id="@+id/ic_off_kipas7"
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:src="@drawable/ic_actuator_off_fan" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="6dp"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="@string/kipas7"
+                                    android:textSize="12dp" />
+                                <Switch
+                                    android:id="@+id/switch_kipas7"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="12dp"
+                                android:paddingVertical="8dp"
+                                android:paddingEnd="3dp"
+                                android:paddingStart="6dp"
+                                android:background="@drawable/shape_body2"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+                                <pl.droidsonroids.gif.GifImageView
+                                    android:id="@+id/ic_on_kipas8"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/ic_actuator_fan"
+                                    android:visibility="gone" />
+                                <ImageView
+                                    android:id="@+id/ic_off_kipas8"
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:src="@drawable/ic_actuator_off_fan" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="6dp"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="@string/kipas8"
+                                    android:textSize="12dp" />
+                                <Switch
+                                    android:id="@+id/switch_kipas8"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="8dp"
+                                android:paddingVertical="8dp"
+                                android:paddingEnd="3dp"
+                                android:paddingStart="6dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:background="@drawable/shape_body2">
+                                <pl.droidsonroids.gif.GifImageView
+                                    android:id="@+id/ic_on_heater1"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_actuator_heater"
+                                    android:visibility="gone" />
+                                <ImageView
+                                    android:id="@+id/ic_off_heater1"
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:src="@drawable/ic_actuator_off_heater" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="6dp"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="@string/pemanas1"
+                                    android:textSize="12dp" />
+                                <Switch
+                                    android:id="@+id/switch_pemanas1"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="12dp"
+                                android:paddingVertical="8dp"
+                                android:paddingEnd="3dp"
+                                android:paddingStart="6dp"
+                                android:background="@drawable/shape_body2"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+                                <pl.droidsonroids.gif.GifImageView
+                                    android:id="@+id/ic_on_heater2"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/ic_actuator_heater"
+                                    android:visibility="gone" />
+                                <ImageView
+                                    android:id="@+id/ic_off_heater2"
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:src="@drawable/ic_actuator_off_heater" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="6dp"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="@string/pemanas2"
+                                    android:textSize="12dp" />
+                                <Switch
+                                    android:id="@+id/switch_pemanas2"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginTop="8dp"
+                                android:paddingVertical="8dp"
+                                android:paddingEnd="3dp"
+                                android:paddingStart="6dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:background="@drawable/shape_body2">
+                                <ImageView
+                                    android:id="@+id/ic_on_evaporator"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_actuator_evaporator"
+                                    android:visibility="gone" />
+                                <ImageView
+                                    android:id="@+id/ic_off_evaporator"
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:src="@drawable/ic_actuator_off_evaporator" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="6dp"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="@string/evaporator"
+                                    android:textSize="12dp" />
+                                <Switch
+                                    android:id="@+id/switch_evaporator"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_marginEnd="12dp"
+                                android:paddingVertical="8dp"
+                                android:paddingEnd="3dp"
+                                android:paddingStart="6dp"
+                                android:background="@drawable/shape_body2"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:visibility="invisible">
+                                <pl.droidsonroids.gif.GifImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/ic_actuator_heater"
+                                    android:visibility="gone" />
+                                <ImageView
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:src="@drawable/ic_actuator_off_heater" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="6dp"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:text="@string/pemanas2"
+                                    android:textSize="12dp" />
+                                <Switch
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</FrameLayout>

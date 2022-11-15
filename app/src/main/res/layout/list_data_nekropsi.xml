@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/date_nekropsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="29 September 2022"
+            android:textColor="@color/dark_green"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/data_nekropsi_iv"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/date_nekropsi"
+            android:layout_marginVertical="8dp"
+            android:src="@drawable/shape_rectangle" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/data_nekropsi_iv"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="3dp"
+                android:padding="8dp"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/shape_rectangle">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Umur: "
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto_regular"/>
+                <TextView
+                    android:id="@+id/ne_umur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_bold"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:layout_marginVertical="3dp"
+                android:background="@drawable/shape_rectangle">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mortalitas: "
+                    android:layout_weight="2"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/roboto_regular"/>
+                <TextView
+                    android:id="@+id/ne_mortalitas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_bold"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="3dp"
+                android:padding="8dp"
+                android:background="@drawable/shape_rectangle">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gejala Klinis: "
+                    android:textSize="16sp"
+                    android:fontFamily="@font/roboto_regular"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/date_nekropsi"
+                    android:layout_marginVertical="4dp"
+                    android:src="@drawable/shape_rectangle4" />
+                <TextView
+                    android:id="@+id/ne_gejalaklinis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gejala klinis"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_regular"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/shape_rectangle">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Catatan"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/roboto_regular"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/date_nekropsi"
+                    android:layout_marginVertical="4dp"
+                    android:src="@drawable/shape_rectangle4" />
+                <TextView
+                    android:id="@+id/ne_catatan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="lorem ipsum"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/roboto_regular"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">eBro</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="select">Pilih Lantai</string>
+    <string name="halo">Halo,&#160;</string>
+    <string name="kandang">Kandang&#160;</string>
+    <string name="user">User</string>
+    <string name="welcome">Selamat datang di Aplikasi eBro</string>
+    <string name="logout">Log Out</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="date">Date</string>
+    <string name="kondisi_kandang">Kondisi Kandang</string>
+    <string name="mode">Otomatis/Manual</string>
+    <string name="lastupdate">Last Update:&#160;</string>
+
+    <!--Menu-->
+    <string name="riwayat">Riwayat Data</string>
+    <string name="grafik">Grafik Data</string>
+
+    <!--Aktuator-->
+    <string name="service_wa">Konsultasi</string>
+
+    <!--Aktuator-->
+    <string name="kipas1">Kipas 1</string>
+    <string name="kipas2">Kipas 2</string>
+    <string name="kipas3">Kipas 3</string>
+    <string name="kipas4">Kipas 4</string>
+    <string name="kipas5">Kipas 5</string>
+    <string name="kipas6">Kipas 6</string>
+    <string name="kipas7">Kipas 7</string>
+    <string name="kipas8">Kipas 8</string>
+    <string name="kipas_i">Kipas Intermiten</string>
+
+    <string name="pemanas1">Pemanas 1</string>
+    <string name="pemanas2">Pemanas 2</string>
+
+    <string name="evaporator">Evaporator</string>
+
+    <string name="lantai1">Lantai 1</string>
+    <string name="lantai2">Lantai 2</string>
+    <string name="lantai3">Lantai 3</string>
+
+</resources>
